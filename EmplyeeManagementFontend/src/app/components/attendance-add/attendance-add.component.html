@@ -1,0 +1,148 @@
+<!--<div class="container mt-4">
+  <h3 class="d-flex justify-content-center">Add Attendance</h3>-->
+<!-- Date picker -->
+<!--<div class="form-group mb-3">
+  <label for="date">Select Date</label>
+  <input type="date" id="date" [(ngModel)]="date" class="form-control" />
+</div>-->
+<!-- Employee Attendance Table -->
+<!--<table class="table table-bordered mt-2">
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.name }}</td>
+      <td>
+        <div class="btn-group">-->
+<!-- Present Button -->
+<!--<button type="button"
+        class="btn btn-sm"
+        [ngClass]="{
+          'btn-success': getStatus(emp.employeeId) === 'Present',
+          'btn-outline-success': getStatus(emp.employeeId) !== 'Present'
+        }"
+        (click)="setStatus(emp.employeeId, 'Present')">
+  Present
+</button>-->
+<!-- Absent Button -->
+<!--<button type="button"
+                    class="btn btn-sm"
+                    [ngClass]="{
+                      'btn-danger': getStatus(emp.employeeId) === 'Absent',
+                      'btn-outline-danger': getStatus(emp.employeeId) !== 'Absent'
+                    }"
+                    (click)="setStatus(emp.employeeId, 'Absent')">
+              Absent
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <button class="btn btn-primary mt-3" (click)="submit()">Save Attendance</button>
+  </table>
+
+</div>-->
+<!--<div class="container mt-4 mb-5">-->
+<!-- extra bottom margin for footer -->
+<!--<h3 class="d-flex justify-content-center">Add Attendance</h3>-->
+<!-- Date picker -->
+<!--<div class="form-group mb-3">
+  <label for="date">Select Date</label>
+  <input type="date" id="date" [(ngModel)]="date" class="form-control" />
+</div>-->
+<!-- Employee Attendance Table -->
+<!--<table class="table table-bordered mt-2">
+  <thead class="table-light">
+    <tr>
+      <th>Employee</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.name }}</td>
+      <td>
+        <div class="btn-group">-->
+<!-- Present Button -->
+<!--<button type="button"
+        class="btn btn-sm"
+        [ngClass]="{
+          'btn-success': getStatus(emp.employeeId) === 'Present',
+          'btn-outline-success': getStatus(emp.employeeId) !== 'Present'
+        }"
+        (click)="setStatus(emp.employeeId, 'Present')">
+  Present
+</button>-->
+<!-- Absent Button -->
+<!--<button type="button"
+                  class="btn btn-sm"
+                  [ngClass]="{
+                    'btn-danger': getStatus(emp.employeeId) === 'Absent',
+                    'btn-outline-danger': getStatus(emp.employeeId) !== 'Absent'
+                  }"
+                  (click)="setStatus(emp.employeeId, 'Absent')">
+            Absent
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>-->
+<!-- Submit Button should be OUTSIDE the table -->
+<!--<div class="text-center mt-4">
+    <button class="btn btn-primary px-4" (click)="submit()">Save Attendance</button>
+  </div>
+</div>-->
+<div class="container mt-4 mb-5">
+  <h3 class="d-flex justify-content-center">Add Attendance</h3>
+
+  <div class="form-group mb-3">
+
+    <input type="date" id="date" [(ngModel)]="date" class="form-control" />
+  </div>
+
+  <table class="table table-bordered mt-2">
+    <thead class="table-light">
+      <tr>
+        <th>Employee</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.name }}</td>
+        <td>
+          <div class="btn-group">
+            <button type="button"
+                    class="btn btn-sm"
+                    [ngClass]="{
+                'btn-success': getStatus(emp.employeeId) === 'Present',
+                'btn-outline-success': getStatus(emp.employeeId) !== 'Present'
+              }"
+                    (click)="setStatus(emp.employeeId, 'Present')">
+              Present
+            </button>
+
+            <button type="button"
+                    class="btn btn-sm"
+                    [ngClass]="{
+                'btn-danger': getStatus(emp.employeeId) === 'Absent',
+                'btn-outline-danger': getStatus(emp.employeeId) !== 'Absent'
+              }"
+                    (click)="setStatus(emp.employeeId, 'Absent')">
+              Absent
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary px-4" (click)="submit()">Save Attendance</button>
+  </div>
+</div>

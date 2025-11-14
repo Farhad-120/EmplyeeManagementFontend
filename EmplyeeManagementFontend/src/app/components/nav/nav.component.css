@@ -1,0 +1,27 @@
+.sidenav {
+  width: 200px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+.sidenav-container {
+  height: 100vh;
+}
+
+.content-area {
+  min-height: calc(100vh - 128px); /* টপ টুলবার + ফুটার বাদ দিয়ে বাকি জায়গা */
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  justify-content: space-between;
+}

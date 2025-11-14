@@ -1,0 +1,84 @@
+/* Container */
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+  font-family: "Segoe UI", sans-serif;
+}
+
+  /* Heading */
+  .form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0d6efd;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+  .form-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    color: #495057;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+
+    .form-group input:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 6px rgba(13,110,253,0.4);
+      outline: none;
+    }
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-add {
+  background: linear-gradient(45deg, #198754, #28a745);
+  color: #fff;
+}
+
+  .btn-add:hover {
+    background: linear-gradient(45deg, #157347, #218838);
+    transform: translateY(-2px);
+  }
+
+.btn-back {
+  background: linear-gradient(45deg, #6c757d, #495057);
+  color: #fff;
+}
+
+  .btn-back:hover {
+    background: linear-gradient(45deg, #495057, #343a40);
+    transform: translateY(-2px);
+  }

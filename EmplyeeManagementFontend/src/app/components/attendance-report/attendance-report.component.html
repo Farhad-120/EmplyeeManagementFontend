@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h3 class="d-flex justify-content-center display-4"> Employeer attendance Report</h3>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Start Date</label>
+      <input type="date" [(ngModel)]="start" class="form-control" />
+    </div>
+    <div class="col">
+      <label>End Date</label>
+      <input type="date" [(ngModel)]="end" class="form-control" />
+    </div>
+    <!--<div class="col d-flex align-items-end">
+    <button class="btn btn-primary me-2" (click)="fetchReport()">Fetch Report</button>
+
+    <button class="btn btn-success" [routerLink]="['/AttendanceAddComponent']">Add Attendance</button>
+    <button class="btn btn-danger" (click)="downloadPDF()" [disabled]="summaries.length === 0">Download PDF</button>
+  </div>-->
+    <div class="col d-flex align-items-end">
+      <button class="btn btn-primary me-2" (click)="fetchReport()">Fetch Report</button>
+      <button class="btn btn-success me-2" [routerLink]="['/AttendanceAddComponent']">Add Attendance</button>
+      <!--<button class="btn btn-danger" (click)="downloadPDF()" [disabled]="summaries.length === 0">Download PDF</button>-->
+    </div>
+
+  </div>
+
+  <table class="table table-bordered" *ngIf="summaries.length > 0">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Department</th>
+        <th>Present</th>
+        <th>Absent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of summaries">
+        <td>{{ s.employeeName }}</td>
+        <td>{{ s.departmentName }}</td>
+        <td>{{ s.presentCount }}</td>
+        <td>{{ s.absentCount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,45 @@
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [opened]="false">
+    <mat-toolbar color="darkblue">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item><mat-icon>home</mat-icon> Home</a>
+      <a mat-list-item  [routerLink]="['/AttendanceAddComponent']"><mat-icon>group</mat-icon> AttendanceReports</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button type="button" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <a mat-button style="color: white;" [routerLink]="['/home']">Home</a>
+      <a mat-button style="color: white;" [routerLink]="['/EmployeeListComponent']">Employeer</a>
+      <a mat-button style="color: white;" [routerLink]="['/AttendanceReportComponent']">AttendanceReport</a>
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary">
+        <mat-icon>person_add</mat-icon>
+        Sign Up
+      </button>
+      <button mat-raised-button color="accent">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+    </mat-toolbar>
+
+
+    <div class="container-fluid content-area">
+      <router-outlet></router-outlet>
+    </div>
+
+
+    <mat-toolbar color="primary" class="footer">
+      <span>© 2025 Employee Management System | All rights reserved.</span>
+      <span class="spacer"></span>
+      <span>Developed by Md Farhad Hossain</span>
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,94 @@
+<!--<div class="row no-gutters border p-3 rounded shadow-sm mb-3 bg-light">
+  <div class="col">
+    <div class="d-flex justify-content-sm-between align-items-center">
+      <h2 class="display-6 text-primary mb-0">Employee List</h2>
+      <div class="d-flex justify-content-end">
+
+<button type="button" mat-icon-button class="btn btn-primary btn-sm" [routerLink]="['/EmployeeAddComponent']"><mat-icon>add</mat-icon></button>
+      </div>
+    </div>
+  </div>
+</div>
+ Employee Table
+<div class="card shadow-sm border-0 rounded-3">
+  <div class="card-body p-0">
+    <table class="table table-hover table-striped mb-0">
+      <thead class="table-primary">
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Join Date</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of employees">
+          <td>{{ e.name }}</td>
+          <td>{{ e.departmentName }}</td>
+          <td>{{ e.joinDate | date: 'mediumDate' }}</td>
+          <td>{{ e.salary | currency:'BDT' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>-->
+
+
+<div class="d-flex justify-content-end">
+  <button type="button" mat-icon-button class="btn btn-primary btn-sm" [routerLink]="['/EmployeeAddComponent']">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<div class="mb-3">
+
+  <input type="text" class="form-control" placeholder="🔍 Search by name or department..."
+         (keyup)="applyFilter($event)">
+  
+</div>
+
+<!-- Employee Table -->
+<div class="card shadow-sm border-0 rounded-3">
+  <div class="card-body p-0">
+    <table class="table table-hover table-striped mb-0">
+      <thead class="table-primary">
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Join Date</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of pagedEmployees">
+          <td>{{ e.name }}</td>
+          <td>{{ e.departmentName }}</td>
+          <td>{{ e.joinDate | date: 'mediumDate' }}</td>
+          <td>{{ e.salary | currency:'BDT' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="card-footer bg-light d-flex justify-content-between align-items-center">
+    <!--<small class="text-muted">
+    Showing {{ pageIndex * pageSize + 1 }} -
+    {{ Math.min((pageIndex + 1) * pageSize, filteredEmployees.length) }}
+    of {{ filteredEmployees.length }}
+  </small>-->
+    <small class="text-muted">
+      Showing {{ pageIndex * pageSize + 1 }} - {{ endCount }}
+      of {{ filteredEmployees.length }}
+    </small>
+
+    <div>
+      <button class="btn btn-sm btn-outline-primary me-2" (click)="previousPage()" [disabled]="pageIndex === 0">
+        Previous
+      </button>
+      <button class="btn btn-sm btn-outline-primary" (click)="nextPage()"
+              [disabled]="(pageIndex + 1) * pageSize >= filteredEmployees.length">
+        Next
+      </button>
+    </div>
+  </div>
+</div>

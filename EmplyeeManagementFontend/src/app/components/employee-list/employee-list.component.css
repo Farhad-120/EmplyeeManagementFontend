@@ -1,0 +1,71 @@
+/*h2.display-6 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.table th {
+  font-weight: 600;
+}
+
+button.btn-primary {
+  border-radius: 8px;
+  padding: 4px 10px;
+  transition: 0.3s;
+}
+
+  button.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+  }
+.full-width-table {
+  width: 100%;
+}
+
+.search-box {
+  width: 250px;
+}
+
+mat-paginator {
+  margin-top: 15px;
+}
+
+.card {
+  overflow-x: auto;
+}
+
+th.mat-header-cell {
+  background-color: #2980b9;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+td.mat-cell {
+  text-align: center;
+}
+*/
+/* Container card */
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card-footer {
+  position: relative;
+  top: 0;
+  background: #f8f9fa;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+}
+
+input.form-control {
+  max-width: 350px;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
